@@ -3,7 +3,7 @@
 import argparse
 
 def find_max_profit(prices):
-      profit  prices[1] - prices[0]
+      profit prices[1] - prices[0]
       for i in range(0, len(prices)):
             lowest_value = prices[i]
             for j in range(i+1, len(prices)):
