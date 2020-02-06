@@ -3,7 +3,22 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+    count = float("inf")
+    for i in range(0, len(recipe)):
+          recipe_key = (list(recipe.keys())[i])
+          try:
+            # if ingredients[recipe_key]:
+              portion = ingredients[recipe_key] // recipe[recipe_key]
+              if portion < count:
+                  count = portion
+              else:
+                  i += 1
+                  
+          except KeyError:
+              count = 0
+              break
+            
+    return count    
 
 
 if __name__ == '__main__':
